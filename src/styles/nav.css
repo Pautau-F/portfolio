@@ -1,0 +1,8 @@
+﻿nav{
+    position: sticky;
+    top: 0;
+    height: 3em;
+    width: 100%;
+    background-color: var(--main-secondary-dark-color);
+    display: none;
+}
