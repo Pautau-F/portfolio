@@ -6,6 +6,7 @@ import Intro from './components/Intro';
 function App() {
   return (
     <div className="app">
+      <div className="background"></div>
       <Nav />
       <SideChoice />
       <Intro />

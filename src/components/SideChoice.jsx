@@ -4,6 +4,7 @@ import DarkSide from "../img/empire_order.png";
 const SideChoice = () => {
   return (
     <header className="block sideChoice">
+      <div className="border"></div>
       <div className="darkSide side">
         <img src={DarkSide} alt="darkSide" />
       </div>
