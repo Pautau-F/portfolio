@@ -1,10 +1,12 @@
 ﻿nav{
     position: fixed;
     z-index: 5;
-    top: 10px;
+    top: 10%;
     left: 10px;
     height: 11em;
-    padding: 5px;
+    padding: 0 5px;
+
+    display: none;
 }
 
 nav:after{
@@ -36,6 +38,7 @@ nav li {
     display: flex;
     align-items: center;
     font-size: 1.25em;
+    font-weight: bold;
     color: #e0e0e0;
     background-color: #000000d8;
     border: 1px solid #000000d8;

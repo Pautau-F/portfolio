@@ -1,12 +1,10 @@
-﻿import LightSide from "../img/jedi_order.png";
-import DarkSide from "../img/empire_order.png";
+﻿import "../styles/intro.css";
 
 const Intro = () => {
   return (
     <div className="block intro">
-      <h2 className="introTitle absCenterHorizontally code">// Introduction </h2>
-
-      <div className="introDescription">
+      <h2 className="introTitle box absCenterHorizontally code">// Introduction </h2>
+      <div className="introDescription box">
         <div>
           <h3 className="code">// Current situation</h3>
           <p>
