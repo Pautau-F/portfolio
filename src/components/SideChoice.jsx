@@ -13,6 +13,7 @@ const SideChoice = () => {
       </div>
       <h1 className="sideTitle code">Florian Caron</h1>
       <p className="sideInfo absCenterHorizontally"> It will have an impact on the UI's color. </p>
+      <p className="sideDisclaimer code absCenterHorizontally"> This website is under construction. </p>
     </header>
   );
 };
