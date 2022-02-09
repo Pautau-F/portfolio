@@ -8,7 +8,7 @@ const Intro = () => {
         <div>
           <h3 className="code">// Current situation</h3>
           <p>
-            I am currently not looking for a job at the moment because I am in apprenticeship until September 20th 2023.
+            I am currently in apprenticeship until September 20th 2023 therefore I am not looking for a job at the moment.
           </p>
         </div>
       </div>
