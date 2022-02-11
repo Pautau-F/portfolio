@@ -73,15 +73,11 @@ h1,h2,h3,p,i {
   scroll-snap-align: start;
 }
 
-.absCenterHorizontally {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  z-index: 1;
+.block:not(:first-of-type){
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .block:after {
@@ -96,6 +92,17 @@ h1,h2,h3,p,i {
   pointer-events: none;
 }
 
+.absCenterHorizontally {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  z-index: 1;
+}
+
 img {
   user-select: none;
 }
@@ -103,4 +110,12 @@ img {
 .box {
   background-color: var(--main-background-color);
   border: 1px solid var(--main-border-color);
+}
+  
+.title {
+  font-size: 1.5em;
+  padding: 5px 10px;
+  top: 20px;
+  transition: all 0.5s;
+  height: 40px;
 }
