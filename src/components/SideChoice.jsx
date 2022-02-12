@@ -8,7 +8,6 @@ const SideChoice = (props) => {
   // TODO: Faire en sorte de scroller au prochain bloc (introduction) lorsque l'utilisateur choisi son alignement
   return (
     <header className="block sideChoice">
-      <div className="border"></div>
       <div className="darkSide side"
         onClick={(event) => setCurrentTheme("dark")}
         >
