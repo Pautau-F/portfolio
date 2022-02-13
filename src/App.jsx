@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <div className="app" data-theme={currentTheme}>
-        <div className="frame"></div>
         <div className="background"></div>
         <Nav />
         <SideChoice setCurrentTheme={setCurrentTheme}/>
