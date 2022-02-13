@@ -75,11 +75,15 @@ h1,h2,h3,p,i {
   scroll-snap-align: start;
 }
 
-.block:not(:first-of-type){
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+.absCenterHorizontally {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  z-index: 1;
 }
 
 .frame {
@@ -92,17 +96,6 @@ h1,h2,h3,p,i {
   border: 1px solid var(--main-border-color);
   pointer-events: none;
   z-index: -1;
-}
-
-.absCenterHorizontally {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  z-index: 1;
 }
 
 img {
