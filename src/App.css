@@ -140,7 +140,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 250px;
+  height: 75vh;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }

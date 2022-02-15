@@ -99,17 +99,7 @@
     background-color: #000000d8;
   }
   
-  .sideDisclaimer {
-    font-size: 12px;
-    padding: 5px 10px;
-    top: 20px;
-    pointer-events: none;
-    color: #e0e0e0;
-    background-color: #000000d8;
-  }
-  
-  .lightSide:hover ~ .sideInfo,
-  .lightSide:hover ~ .sideDisclaimer {
+  .lightSide:hover ~ .sideInfo {
     background-color: #e0e0e0ab;
     color: #000000;
   }

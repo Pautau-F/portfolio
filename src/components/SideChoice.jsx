@@ -26,9 +26,6 @@ const SideChoice = (props) => {
       <p className="sideInfo box absCenterHorizontally">
         It will have an impact on the UI's color.
       </p>
-      <p className="sideDisclaimer box code absCenterHorizontally">
-        This website is under construction.
-      </p>
     </header>
   );
 };
