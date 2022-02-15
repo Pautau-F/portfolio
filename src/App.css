@@ -5,15 +5,21 @@
 }
 
 .app[data-theme="dark"] {
-  --main-background-image: url(./img/darkIntroBg.jpg);
-  --main-background-color: #000000d8;
+  --main-background-image: url(./img/darkBg.jpeg); /* © Jonathan Berube: https://www.this-is-cool.co.uk/the-stunning-star-wars-art-of-jonathan-berube/ */
+  --main-background-intro-image: url(./img/darkIntro.jpg);
+  --main-background-about-image: url(./img/darkIntroAbout.jpg);
+  --main-background-situation-image: url(./img/darkIntroSituation.png);
+  --main-background-color: #000000bb;
   --main-text: #e0e0e0;
   --main-side: #ff0000;
 }
 
 .app[data-theme="light"] {
-  --main-background-image: url(./img/lightIntroBg.jpg);
-  --main-background-color: #e0e0e0c7;
+  --main-background-image: url(./img/lightBg.jpg);
+  --main-background-intro-image: url(./img/lightIntro.jpg);
+  --main-background-about-image: url(./img/lightIntroAbout.jpg);
+  --main-background-situation-image: url(./img/lightIntroSituation.jpg);
+  --main-background-color: #e0e0e08c;
   --main-text: #000000;
   --main-side: #00a2ffb3;
 }
@@ -61,14 +67,14 @@ h1,h2,h3,p,i {
   position: fixed;
   background-image: var(--main-background-image);
   background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .block {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   position: relative;
   scroll-snap-align: start;
 }
@@ -77,8 +83,7 @@ h1,h2,h3,p,i {
   display:flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border-top: 1px solid #000000;
+  padding: 80px 20px 20px 20px;
 }
 
 .block:after {
@@ -118,9 +123,42 @@ img {
 }
   
 .title {
+  position: absolute;
+  z-index: 5;
+  top: 20px;
   font-size: 1.5em;
   padding: 5px 10px;
-  top: 20px;
   transition: all 0.5s;
   height: 40px;
+}
+
+/* DIVIDER */
+
+.divider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 250px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.divider:after {
+  content: "";
+  position: absolute;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  border: 1px solid var(--main-border-color);
+  pointer-events: none;
+}
+
+.divider h2 {
+  font-size: 35px;
+  text-align: center;
+  padding: 5px 10px;
+  max-width: calc(100% - 40px);
 }

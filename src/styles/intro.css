@@ -4,46 +4,26 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    border-bottom: 1px solid var(--main-background-color);
     z-index: 0;
+    justify-content: flex-start;
+    background-image: var(--main-background-intro-image);
+    background-size: cover;
+    background-position: center top;
   }
     
   .introBlock {
     position: relative;
-    z-index: 1;
-    width: 800px;
-    height: 300px;
+    width: 500px;
     max-width: 100%;
+    padding: 5px 10px;
+    margin-top: 20px;
   }
 
-  .about {
-    background-image: url(../img/darkIntroAbout.jpg);
-    background-size: cover;
-    background-position: center bottom;
-  }
-  
-  .introText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.1em;
-    overflow-wrap: break-word;
-    clip-path: polygon(0 0, 60% 0, 41% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0 0, 60% 0, 41% 100%, 0% 100%);
-    width: 100%;
-    height: 100%;
-    padding-left: 1%;
-    background-color: var(--main-background-color);
-  }
-
-  .introText h3 {
-    position: absolute;
-    width: 45%;
-    top: 3%;
+  .introBlock * {
     text-align: center;
+    position: relative;
   }
 
-  .introText p {
-    width: 45%;
-    text-align: center;
+  .introBlock h3 {
+    margin-bottom: 10px;
   }

@@ -8,9 +8,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
-    width: 6em;
+    width: 5em;
     transition: all 0.5s;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
@@ -69,7 +69,7 @@
   }
   
   .lightSide {
-    background-image: url(../img/lightSideBg.jpg);
+    background-image: url(../img/lightSide.jpg);
     background-position: top left;
   }
   
@@ -79,7 +79,7 @@
   }
   
   .darkSide {
-    background-image: url(../img/darkSideBg.jpg);
+    background-image: url(../img/darkSide.jpg);
     background-position: top right;
   }
   
@@ -89,7 +89,9 @@
   }
   
   .sideInfo {
-    font-size: 1.25em;
+    font-size: 1.05em;
+    text-align: center;
+    max-width: calc(100% - 40px);
     padding: 5px 10px;
     bottom: 20px;
     pointer-events: none;
