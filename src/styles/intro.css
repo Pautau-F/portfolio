@@ -27,3 +27,14 @@
   .introBlock h3 {
     margin-bottom: 10px;
   }
+
+  .languages {
+    width: fit-content;
+  }
+
+  .languagesIcons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    padding: 10px;
+  }
