@@ -1,33 +1,46 @@
-import LightSide from "../img/jedi_order.png";
-import DarkSide from "../img/empire_order.png";
-import ProfilePicture from "../img/profilePicture.png";
-import "../styles/sideChoice.css";
+import LightSide from '../img/jedi_order.png'
+import DarkSide from '../img/empire_order.png'
+import ProfilePicture from '../img/profilePicture.png'
+import '../styles/sideChoice.css'
+
+const hideSideChoice = () => {
+  const element = document.querySelector(['.sideChoice'])
+  element.classList.add('hidden')
+}
 
 const SideChoice = (props) => {
-  const { setCurrentTheme } = props
+  const { setCurrentTheme, currentTheme } = props
   return (
-    <header className="block sideChoice">
-      <div className="border"></div>
-      <div className="darkSide side"
-        onClick={(event) => setCurrentTheme("dark")}
-        >
-        <img src={DarkSide} alt="darkSide" />
+    <header className='block sideChoice'>
+      <div
+        className='darkSide side'
+        onClick={() => {
+          setCurrentTheme('dark')
+          hideSideChoice()
+        }}
+      >
+        <img src={DarkSide} alt='darkSide' />
       </div>
-      <div className="lightSide side"
-        onClick={(event) => setCurrentTheme("light")}
-        >
-        <img src={LightSide} alt="lightSide" />
+      <div
+        className='lightSide side'
+        onClick={() => {
+          setCurrentTheme('light')
+          hideSideChoice()
+        }}
+      >
+        <img src={LightSide} alt='lightSide' />
       </div>
-      <aside className="box code">
-        <img src={ProfilePicture} alt="darkSide" />
-        <h1 className="sideTitle">Florian Caron</h1>
+      <aside className='box code'>
+        <img src={ProfilePicture} alt='darkSide' />
+        <h1 className='sideTitle'>Florian Caron</h1>
       </aside>
 
-      <p className="sideInfo box absCenterHorizontally">
-        It will have an impact on the UI's color.
-      </p>
+      {currentTheme && <p className='sideInfo box absCenterHorizontally'>You have chosen the {currentTheme} side</p>}
+      {!currentTheme && (
+        <p className='sideInfo box absCenterHorizontally'>Choosing a side will have an impact on the UI</p>
+      )}
     </header>
-  );
-};
+  )
+}
 
-export default SideChoice;
+export default SideChoice

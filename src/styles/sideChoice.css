@@ -1,7 +1,57 @@
 ﻿/* ####### SIDECHOICE ####### */
-.sideChoice {
+  .sideChoice {
     display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    transition: opacity 1s 0s;
   }
+
+  /* SIDEHIDDEN (when a side is selected) */
+    
+    .hidden {
+      transition: opacity 1s 3s;
+      opacity: 0;
+    }
+
+    .hidden .side{
+      transition: transform 3.5s 1.5s;
+    }
+
+    .app[data-theme="light"] .hidden .lightSide img {
+      transition: transform 0.5s, opacity 1s 0.5s;
+      transform: translate(-25vw) scale(2);
+      opacity: 0;
+    }
+
+    .app[data-theme="light"] .hidden .darkSide img {
+      opacity: 0;
+    }
+
+    .app[data-theme="light"] .hidden .lightSide {
+      z-index: 3;
+    }
+
+    .app[data-theme="dark"] .hidden .darkSide img {
+      transition: transform 0.5s, opacity 1s 0.5s;
+      transform: translate(25vw) scale(2);
+      opacity: 0;
+    }
+
+    .app[data-theme="dark"] .hidden .lightSide img {
+      opacity: 0;
+    }
+
+    .app[data-theme="dark"] .hidden .darkSide {
+      z-index: 3;
+    }
+
+    .hidden .lightSide {
+      transform: translate(100%);
+    }
+
+    .hidden .darkSide {
+      transform: translate(-100%)
+    }
   
   aside {
     position: absolute;
@@ -15,6 +65,7 @@
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
+  
 
   aside:hover {
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
@@ -43,6 +94,7 @@
   }
   
   .side {
+    position: relative;
     width: 50%;
     display: flex;
     align-items: center;
@@ -51,11 +103,30 @@
     filter: grayscale(100%);
     background-size: cover;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: filter 0.5s, transform 3.5s;
     z-index: 0;
+    transform: translate(0)
   }
-  
-  .side:hover {
+
+  .lightSide {
+    border-left: #000000d8 solid 1px;
+  }
+
+  .darkSide {
+    border-right: #000000d8 solid 1px;
+  }
+
+  .app[data-theme=""] .sideChoice .side:hover {
+    -webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(10%);
+  }
+
+  .app[data-theme="dark"] .sideChoice .darkSide{
+    -webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(10%);
+  }
+
+  .app[data-theme="light"] .sideChoice .lightSide{
     -webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
     filter: grayscale(10%);
   }
@@ -73,7 +144,7 @@
     background-position: top left;
   }
   
-  .lightSide:hover img {
+  .app[data-theme=""] .sideChoice .lightSide:hover img, .app[data-theme="light"] .sideChoice .lightSide img {
     -webkit-filter: drop-shadow(0px 0px 5px #00a2ffb3);
     filter: drop-shadow(0px 0px 5px #00a2ffb3);
   }
@@ -83,7 +154,7 @@
     background-position: top right;
   }
   
-  .darkSide:hover img {
+  .app[data-theme=""] .sideChoice .darkSide:hover img, .app[data-theme="dark"] .sideChoice .darkSide img {
     -webkit-filter: drop-shadow(0px 0px 7px #ff0000);
     filter: drop-shadow(0px 0px 7px #ff0000);
   }
@@ -95,11 +166,12 @@
     padding: 5px 10px;
     bottom: 20px;
     pointer-events: none;
-    color: #e0e0e0;
-    background-color: #000000d8;
+    z-index: 4;
+    color: var(--main-text);
+    background-color: var(--main-background-color);
   }
   
-  .lightSide:hover ~ .sideInfo {
-    background-color: #e0e0e0ab;
+  .lightSide:hover ~.sideInfo {
     color: #000000;
+    background-color: #e0e0e08c;
   }

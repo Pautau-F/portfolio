@@ -2,11 +2,12 @@
 /* #### THEME #### */
 .app {
   --main-border-color: #000000d8;
+  --main-background-color: #000000e3;
+  --main-text: #e0e0e0;
 }
 
 .app[data-theme="dark"] {
   --main-background-image: url(./img/darkBg.jpeg); /* © Jonathan Berube: https://www.this-is-cool.co.uk/the-stunning-star-wars-art-of-jonathan-berube/ */
-  --main-background-intro-image: url(./img/darkIntro.png);
   --main-background-about-image: url(./img/darkIntroAbout.jpg);
   --main-background-situation-image: url(./img/darkIntroSituation.png);
   --main-background-color: #000000e3;
@@ -16,7 +17,6 @@
 
 .app[data-theme="light"] {
   --main-background-image: url(./img/lightBg.jpg);
-  --main-background-intro-image: url(./img/lightIntro.png);
   --main-background-about-image: url(./img/lightIntroAbout.jpg);
   --main-background-situation-image: url(./img/lightIntroSituation.jpg);
   --main-background-color: #e0e0e08c;
@@ -65,7 +65,7 @@ h1,h2,h3,p,i {
 
 .background {
   position: fixed;
-  background-image: var(--main-background-image);
+  background: var(--main-background-image);
   background-position: center;
   background-size: cover;
   width: 100vw;
@@ -75,7 +75,7 @@ h1,h2,h3,p,i {
 .block {
   min-width: 100vw;
   min-height: 100vh;
-  position: relative;
+  position: absolute;
   scroll-snap-align: start;
 }
 
@@ -96,10 +96,7 @@ h1,h2,h3,p,i {
   background-color: #00000013;
   border: 1px solid var(--main-border-color);
   pointer-events: none;
-}
-
-.block * {
-  z-index: 1;
+  z-index: 10;
 }
 
 .absCenterHorizontally {
@@ -130,6 +127,14 @@ img {
   padding: 5px 10px;
   transition: all 0.5s;
   height: 40px;
+}
+
+.restart {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 5em;
+  z-index: 2;
 }
 
 /* DIVIDER */
