@@ -8,8 +8,7 @@ const Intro = () => {
       <div className='introBlock box'>
         <h3 className='code'>About me</h3>
         <p>
-          Greetings! I'm Florian and I'm developping since 2019 so it's just the beginning but I aim at being better
-          everyday.
+          Greetings! I'm Florian and I'm developping since 2019 so it's just the beginning but I aim at being better everyday.
         </p>
       </div>
 
