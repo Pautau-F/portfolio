@@ -15,8 +15,10 @@ const SideChoice = (props) => {
       <div
         className='darkSide side'
         onClick={() => {
-          setCurrentTheme('dark')
-          hideSideChoice()
+          if(!currentTheme){
+            setCurrentTheme('dark')
+            hideSideChoice()
+          }
         }}
       >
         <img src={DarkSide} alt='darkSide' />
@@ -24,8 +26,10 @@ const SideChoice = (props) => {
       <div
         className='lightSide side'
         onClick={() => {
-          setCurrentTheme('light')
-          hideSideChoice()
+          if(!currentTheme){
+            setCurrentTheme('light')
+            hideSideChoice()
+          }
         }}
       >
         <img src={LightSide} alt='lightSide' />

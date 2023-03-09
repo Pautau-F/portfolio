@@ -22,6 +22,7 @@ function App() {
     <>
       <div className='app' data-theme={currentTheme}>
         <div className='background' />
+        {/* Find a way to hide the restart button when clicked on */}
         {currentTheme && (
           <button className='restart' onClick={restart}>
             Restart
