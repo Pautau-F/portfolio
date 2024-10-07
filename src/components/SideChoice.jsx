@@ -1,6 +1,5 @@
 import LightSide from '../img/jedi_order.png'
 import DarkSide from '../img/empire_order.png'
-import ProfilePicture from '../img/profilePicture.png'
 import '../styles/sideChoice.css'
 
 const hideSideChoice = () => {
