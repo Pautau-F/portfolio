@@ -34,10 +34,6 @@ const SideChoice = (props) => {
       >
         <img src={LightSide} alt='lightSide' />
       </div>
-      <aside className='box code'>
-        <img src={ProfilePicture} alt='darkSide' />
-        <h1 className='sideTitle'>Florian Caron</h1>
-      </aside>
 
       {currentTheme && <p className='sideInfo box absCenterHorizontally'>You have chosen the {currentTheme} side</p>}
       {!currentTheme && (
